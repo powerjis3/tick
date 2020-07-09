@@ -6,6 +6,8 @@ Vagrant.configure("2") do |config|
     web.vm.box = box
     web.vm.hostname = "web"
 
+    web.vm.network "private_network", ip: "192.168.69.11", virtualbox__intnet: "tick"
+
     web.vm.provider "virtualbox" do |v|
       v.name = "web"
       v.memory = 1024
@@ -20,6 +22,8 @@ Vagrant.configure("2") do |config|
     grafana.vm.box = box
     grafana.vm.hostname = "grafana"
 
+    grafana.vm.network "private_network", ip: "192.168.69.12", virtualbox__intnet: "tick"
+
     grafana.vm.provider "virtualbox" do |v|
       v.name = "grafana"
       v.memory = 1024
@@ -32,6 +36,8 @@ Vagrant.configure("2") do |config|
     influxdb01.vm.box = box
     influxdb01.vm.hostname = "influxdb01"
 
+    influxdb01.vm.network "private_network", ip: "192.168.69.13", virtualbox__intnet: "tick"
+
     influxdb01.vm.provider "virtualbox" do |v|
       v.name = "influxdb01"
       v.memory = 2048
@@ -43,6 +49,8 @@ Vagrant.configure("2") do |config|
   config.vm.define "influxdb02" do |influxdb02|
     influxdb02.vm.box = box
     influxdb02.vm.hostname = "influxdb02"
+
+    influxdb02.vm.network "private_network", ip: "192.168.69.14", virtualbox__intnet: "tick"
 
     influxdb02.vm.provider "virtualbox" do |v|
       v.name = "influxdb02"
