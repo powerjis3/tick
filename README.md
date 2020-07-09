@@ -18,3 +18,5 @@ Vagrantfile을 공유하기전 `vagrant validate` 명령어로 확인 해주세�
 - vm influxdb01 connect
 ### vagrant ssh inflxudb02
 - vm influxdb02 connect
+### vargant halt hostname
+- vm graceful shutdown 
